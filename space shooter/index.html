@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter</title>
+  </head>
+  <style>
+    body {
+      width: 100%;
+      overflow: hidden;
+      background: url("space.jpg");
+      background-size: cover;
+    }
+
+    #board {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: 40px auto;
+      border: 2px solid white;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    #points {
+      position: absolute;
+      top: 10px;
+      left: 120px;
+      opacity: 0.7;
+      font-size: 3em;
+      color: white;
+    }
+
+    #hearts {
+      position: absolute;
+      top: 10px;
+      left: 300px;
+      opacity: 0.7;
+      font-size: 3em;
+      color: red;
+    }
+
+    #scoreL {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 3em;
+      color: white;
+    }
+
+    #heartsL {
+      position: absolute;
+      top: 10px;
+      left: 170px;
+      font-size: 3em;
+      color: red;
+    }
+
+    .controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      border: solid purple 2px;
+      background-color: aqua;
+      text-align: center;
+      text-decoration: solid;
+      margin-left: 10px;
+      padding: 5px 10px;
+    }
+ 
+    
+  </style>
+
+  <body>
+    <!-- <div id="start-screen">
+      <h1>Space Shooter</h1>
+      <p>
+        Use the arrow keys to move the jet and the space bar to shoot. Destroy the aliens to score points and avoid their attacks to stay alive. Good luck!
+      </p>
+      <button id="start-button">Start</button>
+    </div> -->
+
+    <div id="board">
+      <canvas id="myCanvas" width="500" height="500"></canvas>
+    </div>
+    <div id="scoreL">score:</div><div id="points">0</div>
+    <div id="heartsL">hearts:</div><div id="hearts">❤️❤️❤️</div>
+    <div class="controls">
+      <button id="pause-button">Pause</button>
+      <button id="resume-button">Resume</button>
+    </div>
+
+    <script src="engine.js"></script>
+  </body>
+</html>
